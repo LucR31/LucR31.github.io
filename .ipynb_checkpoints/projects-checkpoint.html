@@ -1,69 +1,103 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
 * {
-  box-sizing:border-box;}
-
-body {
-  margin: 0;
-  font-family: georgia;
+  box-sizing: border-box;
 }
 
-.container {
-  padding: 14px;
+
+body {
+  font-family: georgia;
+  padding: 20px;
+  background: #F5FAFF;
+}
+    
+h2 {
+color: #263546;
+font-size: 30px;
+}
+h5 {
+color: #4B6B8C;
+font-size: 15px;
+}
+p {
+color: #263546;
+text-align: justify;
+    clear: both;
+}
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+
+.leftcolumn {   
+  float: left;
+  width: 70%;
+   
+}
+
+
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+    
+}
+video{
+  float: left;
+  padding-right: 20px;  
+}
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   clear: both;
+
 }
 
 .row:after {
   content: "";
   display: table;
-  clear: both
+  clear: both;
 }
 
-.column-66 {
-  float: left;
-  width: 50%;
+
+.footer {
   padding: 20px;
+  text-align: center;
+  background: #DCE7EE;
+  margin-top: 20px;
 }
 
-.column-33 {
-  float: left;
-  width: 30%;
-  padding: 20px;
-}
-.column-20 {
-  float: left;
-  width: 20%;
-  padding: 20px ;
-}
-
-.large-font {
-  font-size: 18px;
-}
-
-.xlarge-font {
-  font-size: 33px
-}
-
-@media screen and (max-width: 1000px) {
-  .column-66,
-  .column-33,
-  .column-20 {
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
     width: 100%;
-    text-align: center;
+    padding: 0;
   }
 }
-#more {display: none;}
-    
-    
+a:link {
+ 
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;   
+
+}
 .myDiv ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: #DCE7EE;
 }
 
 .myDiv li {
@@ -81,162 +115,134 @@ body {
 .myDiv li a:hover {
   background-color: #648EBB;
 }
+    
+.link {
+  border: none;
+  color: #32475D;
+  font-family: "georgia";
+  padding: 7px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #DCE7EE;
 
-a:link {
-  color: #648EBB;
-  text-decoration: none;
 }
-a:visited {
-  color: #648EBB;text-decoration: none;
-}
+    
 </style>
 </head>
 <body>
-    
+
 <div class=myDiv>
 <ul>
   <li><a href=index.html>Home</a></li>
 </ul>
 </div>
 
-
-<div class="container"  style="background-color:#F5FAFF">
-  <div class="row">
-    <div class="column-66">
+<div class="row">
+  <div class="leftcolumn">
       
-      <h1 class="xlarge-font" style="color:#263546"><b>Generating synthetic data using AI </b></h1> 
-      <font style="color:#648EBB; font-size: 12px;"><b>ARTIFICIAL INTELLIGENCE</b></font>
       
-      <h1 class="large-font" style="color:#4B6B8C;"><b>Capstone project of the data science Bootcamp, Zurich, 2022. The project was proposed by the SIX group.</b></h1>
-      <p style="text-align:justify ;color:#263546">
+    <!-- posts=======================================================================================-->
+    <div class="card">
+      <h2>Generating synthetic data using AI |<font style="color:#648EBB;font-size: 12px;"><b>  ARTIFICIAL INTELLIGENCE</b></font></h2>
+        
+      <h5>Capstone project of the data science Bootcamp, Zurich, 2022. The project was proposed by the SIX group.</h5>
+      
+      <p>Companies nowadays handle large amounts of data and use it for many types of statistical analysis. In most cases, this data contains the personal information of many users. A solution to this problem is to generate synthetic data, i.e., data preserving the statistical properties of the real data, yet fake.<br><br>
 
-Companies nowadays handle large amounts of data and use it for many types of statistical analysis. In most cases, this data contains the personal information of many users. A solution to this problem is to generate synthetic data, i.e., data preserving the statistical properties of the real data, yet fake.<br><br>
-
- In this project, we generated synthetic data using two well-known algorithms in the field of deep learning: Generative Adversarial Networks and Variational Autoencoders. We also used not-so-known variations of these algorithms. Our conclusions agree with the current research. There is a trade-off between the usability and the privacy of the synthetic data. <br><br>
+ In this project, we generated synthetic data using two well-known algorithms in the field of deep learning: Generative Adversarial Networks and Variational Autoencoders. We also used not-so-known variations of these algorithms. Our conclusions agree with the current research. There is a trade-off between the usability and the privacy of the synthetic data.<br><br><br>
           
-          <a href="https://github.com/krylowicz/synthetic-data">Check our project in Github</a><br>
-          <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">More about GAN</a><br>
-          <a href="https://this-person-does-not-exist.com/en">Link to: this person does not exist</a>        
+          <a class="link" href="https://github.com/krylowicz/synthetic-data">Project in Github</a>
+          <a class="link" href="https://en.wikipedia.org/wiki/Generative_adversarial_network">GAN</a>
+          </p>
+    </div>
+      
+      
+    <!-- posts=======================================================================================-->
+   <div class="card">
+      <h2>Gravitational lensing and galaxy cluster mass density profile |<font style="color:#648EBB;font-size: 12px;"><b>  ASTRONOMY</b></font></h2>
+      <h5>Research collaboration with the Astrophysics Department of the University of Oviedo, 2020-2021. Remote.</h5>
+      
+      <p style="margin-bottom:1cm;"> <!--<img src="data/maps.png" width="290" style="float:left; padding-right: 20px">
+          
+         Gravitational lensing is the effect of light distortion provoked by a gravitational force between the light source and the observer. The source of such is called a gravitational lens, classical examples are cluster of galaxies and black holes. Some of this ligth distortions are easily seen, as the one capture by Hubble in the picture. This is an example of what is known as strong lensing. Another effect caused by a lens is known as magnification bias. This magnifies the light intensity of light sources, allowing us to see celestial objects that otherwise would be too faint to see. this is known as weak lensing, an the effects are usually measured statistically.  <br><br> 
+          <a title="Lensshoe_hubble.jpg: ESA/Hubble &amp; NASA
+derivative work: Bulwersator, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:A_Horseshoe_Einstein_Ring_from_Hubble.JPG"><img width="280" style="float:right;padding: 20px"  alt="A Horseshoe Einstein Ring from Hubble" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/A_Horseshoe_Einstein_Ring_from_Hubble.JPG/512px-A_Horseshoe_Einstein_Ring_from_Hubble.JPG"></a>
+    In our research we explore the magnification bias provoked by roughly three thousand galaxy clusters. We used catalogs from Herchel and SSDS. <br><br>-->
+          
+        <a class="link"  href="https://doi.org/10.1051/0004-6361/202141905">Publication</a>
+        <a class="link"  href="https://en.wikipedia.org/wiki/Gravitational_lens">Gravitatinal Lensing</a>
         </p>
-      
-    </div>
-     <div class="column-33">
-        <!--<img src="GCX.jpeg" width="420" height="420">-->
-    </div>
-      <div class="column-20"><br><br>
-        
-       <!--<b style="text-align:justify ;color:#648EBB"> Text.</b> -->
-            
-    </div>
-      
-  </div>
-</div>
-
-<!-- Gravitational lensing -->
-<div class="container" >
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font" style="color:#263546"><b>Gravitational lensing and galaxy cluster mass density profile</b></h1>
-      <font style="color:#648EBB; font-size: 12px"><b>ASTRONOMY</b></font>
-      <h1 class="large-font" style="color:#4B6B8C;"><b> Research collaboration with the Astrophysics Department of the University of Oviedo, 2020-2021. Remote.</b></h1>
-      <p style="text-align:justify;color:#263546"> Gravitational lensing is the effect of light distortion provoked by a gravitational force between the light source and the observer. 
-          
-         
-          
-          
-            <br><br>
-        
-          <a href="https://doi.org/10.1051/0004-6361/202141905">Check our publication</a><br>
-          <a href="https://en.wikipedia.org/wiki/Gravitational_lens">More about Gravitatinal Lensing</a>
-        </p>
-      
-    </div>
-    <div class="column-33"><br><br>
-        <a title="Lensshoe_hubble.jpg: ESA/Hubble &amp; NASA
-derivative work: Bulwersator, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:A_Horseshoe_Einstein_Ring_from_Hubble.JPG"><img width="380"  alt="A Horseshoe Einstein Ring from Hubble" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/A_Horseshoe_Einstein_Ring_from_Hubble.JPG/512px-A_Horseshoe_Einstein_Ring_from_Hubble.JPG"></a>
-    </div>
-       <div class="column-20"><br><br><br>
-        
-       <b style="text-align:justify ;color:#648EBB"> A Horseshoe Einstein Ring from Hubble.</b>  
-            
-    </div>
-     
-  </div>
-   
-</div>
-
-
-<!-- Thesis -->
-<div class="container" style="background-color:#F5FAFF" >
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font" style="color:#263546"><b>Positive Hopf plumbed links with maximal signature</b></h1>
-      <font style="color:#648EBB; font-size: 12px"><b>MATHEMATICS</b></font>
-      <h1 class="large-font" style="color:#4B6B8C;"><b> This is the topic of my doctoral thesis, University of Bern, Bern, 2017-2021. </b></h1>
-      
-      <p style="text-align:justify"> 
-          
+    
+      </div>
+      <!-- posts=======================================================================================-->
+      <div class="card">
+      <h2>Positive Hopf plumbed links with maximal signature |<font style="color:#648EBB;font-size: 12px;"><b>  MATHEMATICS</b></font></h2>
+      <h5>This is the topic of my doctoral thesis, University of Bern, Bern, 2017-2021.</h5>
+    
+      <p> <video width="280" height="280" controls>
+         <source src="data/totrefoil.mp4" type="video/mp4">
+         </video>
          A knot is a circle embedded in the 3-dimensional space, and a link is a collection of knots linked (or not) together. The simplest link is called a Hopf link: <img src="data/chain2.png" width="30" height="15">. In addition, if we give an orientation to the Hopf link, we can distinguish between two types of Hopf links: the positive Hopf link and its mirror, the negative Hopf link.<br><br>
           
-          Two knots or links are equivalent when you can deform one into the other without the need to cut and re-join. The video is an example of how a knot with many crossings can be transformed into a much simpler knot.<br><br>
+          Two knots or links are equivalent when you can deform one into the other without the need to cut and glue. The video shows an example of how a knot with many crossings can be transformed into a much simpler knot (the trefoil knot). <br><br>
           
-          "What is knot theory about? One answer is that knot theory studies the placement problem: Given spaces X and Y, classify how X may be placed within Y."—Louis H. Kauffman.<br><br>
+          "What is knot theory about? One answer is that knot theory studies the placement problem: Given spaces, X and Y, classify how X may be placed within Y."—Louis H. Kauffman. In classical knot theory, X is a circle and Y is a 3-dimensional space. One can also generalize the idea of knots for higher dimensions, where X is the n-sphere and Y is the n+2 dimensional space. <br><br>
           
-          I studied links constructed with positive Hopf links, using an operation called <i>plumbing</i>. And how, when they satisfy given conditions, these are equivalent to one of the links denoted by \(A_{n}\), \(D_{n}\), and \(E_{6}\), \(E_{7}\), \(E_{8}\). As well as to what extent that equivalence holds true.<br><br><br>
-        
-          <a href=" https:">Link to my Thesis</a><br>
-          <a href=" https:">More about Knot Theory</a>      
-        </p>
+          I studied links constructed with positive Hopf links, using an operation called <i>plumbing</i>. And how, when they satisfy given conditions, these are equivalent to one of the links denoted by \(A_{n}\), \(D_{n}\), and \(E_{6}\), \(E_{7}\), \(E_{8}\). As well as to what extent that equivalence holds.<br><br><br>
+          
+          <a class="link" href=" https:">Link to my Thesis</a>
+          <a class="link" href=" https:">Knot Theory</a></p>
+    </div>
       
-    </div>
-         <div class="column-33"><br><br><br><br><br><br><br><br><br>
-         <video width="380" height="380" controls>
-         <source src="data/totrefoil.mp4" type="video/mp4" >
-         </video>
-        
-        </div>
-    <div class="column-20"><br><br><br><br><br><br><br><br><br><br>
-        
-       <b style="text-align:justify ;color:#648EBB"> Transformation from a rather complicated knot to a trefoil knot. Animation created with KnotPlot.</b>  
+      <!-- posts=======================================================================================-->
+      <div class="card">
+      <h2>Jordan decomposition of the Kronecker product of two Jordan matrices |<font style="color:#648EBB;font-size: 12px;"><b>  MATHEMATICS</b></font></h2>
+      <h5>Undergraduate research, Wayne State University, Detroit, 2013-2014.</h5>
+          
+          
+      <p> 
+          A Jordan block is a square matrix of size \(n\) with \(\lambda\) in the diagonal, ones in the superdiagonal, and zeroes elsewhere, denoted by \(J_{n}(\lambda)\). A Jordan matrix is a diagonal matrix, where the diagonal is composed of Jordan blocks, usually denoted as \(J_{n_{1}}(\lambda_{1})\oplus\dots\oplus J_{n_{r}}(\lambda_{r})\). <br><br>
             
+        We showed that the Kronecker product \(J_{2}(\lambda) \otimes J_{n}(\mu)\) is congruent to \(J_{n-1}(\lambda\mu)\oplus J_{n+1}(\lambda\mu)\) for characteristic different from two, and \(J_{n}(\lambda\mu)\oplus J_{n}(\lambda\mu)\) for characteristic equal to two. What about \(J_{3}(\lambda)\otimes J_{n}(\mu)\)? And for \(J_{m}(\lambda) \otimes J_{n}(\mu)\)? <br><br>
+          
+          <a class="link"  href="https://en.wikipedia.org/wiki/Jordan_matrix">Jordan matrices</a>
+          <a class="link" href="https://en.wikipedia.org/wiki/Kronecker_product">Kronecker product</a>
+   </p>
     </div>
+      <!-- posts=======================================================================================-->
+      
+      
+      
+  </div>
+    
+    
+    
+    
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Projects in progress</h2>
+      <ul><li><p>...</p></li>
+      </ul>
+    </div>
+    
   </div>
 </div>
 
-<!-- Jordan Decomposition -->
-<div class="container" >
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font" style="color:#263546"><b>Jordan decomposition of the Kronecker product of two Jordan matrices</b></h1>
-      <font style="color:#648EBB; font-size: 12px"><b>MATHEMATICS</b></font>
-          
-      <h1 class="large-font" style="color:#4B6B8C;"><b>Undergraduate research, Wayne State University, Detroit, 2013-2014.</b></h1>
-      
-      <p style="text-align:justify"> A Jordan block is a square matrix of size \(n\) with \(\lambda\) in the diagonal, ones in the superdiagonal, and zeroes elsewhere, denoted by \(J_{n}(\lambda)\). A Jordan matrix is a diagonal matrix, where the diagonal is composed of Jordan blocks, usually denoted as \(J_{n_{1}}(\lambda_{1})\oplus\dots\oplus J_{n_{r}}(\lambda_{r})\). <br><br>
-            
-        We showed that the Kronecker product \(J_{2}(\lambda) \otimes J_{n}(\mu)\) is congruent to \(J_{n-1}(\lambda\mu)\oplus J_{n+1}(\lambda\mu)\) for characteristic different from two, and \(J_{n}(\lambda\mu)\oplus J_{n}(\lambda\mu)\) for characteristic equal to two. What about \(J_{3}(\lambda)\otimes J_{n}(\mu)\)? And for \(J_{m}(\lambda) \otimes J_{n}(\mu)\)? 
-        
-        <br><br>
-        
-          <a href="https://en.wikipedia.org/wiki/Jordan_matrix">More about Jordan matrices</a><br>
-          <a href="https://en.wikipedia.org/wiki/Kronecker_product">More about Kronecker product</a>
-   
-        </p>
-      
-    </div>
-      <div class="column-33">
-        <img src="data/jordan.png" width="360" height="360">
-    </div>
-      <div class="column-20"><br><br>
-        
-       <b style="text-align:justify ;color:#648EBB"> An example of a Jordan matrix composed by two Jordan blocks with diagonals \(\lambda\) and \(\mu\) and sizes 4 and 3, respectively. </b>  
-            
-    </div>
-  </div>
+<div class="footer">
+    
+    <p style="text-align: center;">email: lucas.fer.vil@outlook.com<br><br>
+          <a href="https://www.github.com/LucR31">
+           <i class="fa fa-github" style="font-size:25px;color:#263546"></i></a>
+    
+          <a href="https://www.linkedin.com/in/lucas-fernandez-phd-447890229/">
+            <i class="fa fa-linkedin" style="font-size:25px;color:#263546"></i></a>
+    
+            <a href="https://orcid.org/0000-0002-3662-3256">
+            <span class="iconify-inline" data-icon="fa-brands:orcid" style="color: #263546;" data-width="25" data-height="25"></span></a></p>
+    
 </div>
 
-    
-    
 </body>
 </html>
+
 
