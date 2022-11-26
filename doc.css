@@ -159,10 +159,33 @@ footer {
   padding: 50px;
   margin: 10px;
   color: white;
-  font-size: 80px;
+  font-size: 50px;
 }
 
 .title-sub{
   color: white;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+/*===============BLINKING ANIMATION=====================*/
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*===============BIO=====================*/
+.bio{
+  font-size: 20px;
+  font-weight: Normal;
+  text-align: justify;
 }
