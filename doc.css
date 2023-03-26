@@ -99,7 +99,7 @@ body {
 
 .parallax {
   /* The image used */
-  background-image: url("images/moon3.png");
+  background-image: url("images/cube.jpg");
 
   /* Set a specific height */
   min-height: 600px; 
@@ -158,12 +158,12 @@ footer {
   /*border: 5px solid green;*/
   padding: 50px;
   margin: 10px;
-  color: white;
+  color: rgb(211, 204, 204);
   font-size: 50px;
 }
 
 .title-sub{
-  color: white;
+  color: rgb(211, 204, 204);
   font-size: 20px;
 }
 
