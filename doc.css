@@ -130,7 +130,7 @@ html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .topnav a:hover {
@@ -159,12 +159,12 @@ footer {
   padding: 50px;
   margin: 10px;
   color: rgb(211, 204, 204);
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .title-sub{
   color: rgb(211, 204, 204);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /*===============BLINKING ANIMATION=====================*/
@@ -185,7 +185,7 @@ footer {
 }
 /*===============BIO=====================*/
 .bio{
-  font-size:18px;
+  font-size:16px;
   font-weight: Normal;
   text-align: justify;
   
