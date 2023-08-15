@@ -100,6 +100,7 @@ body {
 .parallax {
   /* The image used */
   background-image: url("images/cube.jpg");
+  border-radius: 12px;
 
   /* Set a specific height */
   min-height: 600px; 
@@ -120,7 +121,8 @@ html {
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(211, 204, 204);
+  border-radius: 12px;
 }
 
 .topnav a {
