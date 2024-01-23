@@ -148,6 +148,22 @@ html {
   background-color:white;
   color: black;
 }
+/*===============A=====================*/
+.list{
+  background-color: rgb(211, 204, 204);
+  border-radius: 12px;
+  font-size:19px;
+}
+ul {
+  list-style-type: none;
+  padding:20px;
+  margin:40px;
+  line-height: 1.5;
+}
+
+li.a::before{
+  content: "📌 ";
+}
 
 /*===============FOOTER=====================*/
 
@@ -157,6 +173,7 @@ footer {
   background-color: white;
   color: white;
 }
+
 
 /*===============TITLE=====================*/
 .title{
