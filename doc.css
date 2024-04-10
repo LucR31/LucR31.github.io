@@ -42,15 +42,52 @@ body {
   }
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
+/*===============BLOG=====================*/
+* {
+  box-sizing: border-box;
 }
 
-/* Remove extra left and right margins, due to padding */
-.row {padding: 0px;}
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -59,44 +96,20 @@ body {
   clear: both;
 }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
+    padding: 0;
   }
-}
-
-/* Style the counter cards */
-.card {
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-  padding: 0px;
-  /*text-align: justify;*/
-  /*background-color: #f1f1f1;*/
-}
-
-
-
-
-/* Create two equal columns that floats next to each other */
-.column-card {
-  float: left;
-  padding: 1px;  
-}
-.left {
-  margin-top: 10px;
-  width: 25%;
-}
-
-.right {
-  width: 75%;
-}
-/* Clear floats after the columns */
-.row-card:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /*===============PARALLAX=====================*/
@@ -210,4 +223,28 @@ footer {
   font-weight: Normal;
   text-align: justify;
   
+}
+
+/*collapsible*/
+
+.collapsible {
+  background-color: rgb(211, 204, 204);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
 }

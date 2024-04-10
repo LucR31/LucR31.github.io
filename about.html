@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="doc.css" rel="stylesheet">
   </head>
 
@@ -21,8 +22,51 @@
   </div>
 
 
-<h2 style="text-align: center;" id="section3">ABOUT&nbsp;</h2>
+  <div class="parallax"> 
+    <div class="title">Dr. Lucas Fernández Vilanova
+      <div class="title-sub">Mathematician | Data Scientist | Swimmer
+        <!--<img src="g21.png" width="110" style = "margin-left: 1px;margin-top: 3px;vertical-align: top;">--> </div>
+        
+        <a href="https://www.github.com/LucR31">
+        <i class="fa fa-github" style="font-size:26px;color:rgb(211, 204, 204)"></i></a>
+  
+        <a href="https://www.linkedin.com/in/lucas-fernandez-vilanova-447890229/">
+        <i class="fa fa-linkedin-square" style="font-size:26px;color:rgb(211, 204, 204)"></i></a>
+  
+        <a href="https://scholar.google.com/citations?user=BTqPg1UAAAAJ&hl=en">
+        <i class="ai ai-google-scholar-square" style="font-size:26px;color:rgb(211, 204, 204)"></i></a>
+  
+        <a href="https://www.swimrankings.net/index.php?page=athleteDetail&athleteId=4082438">
+        <img src = "icons/swimmeresp.svg" class="filter-green" width="32" height="32"/></a>
+  
+        <a href="https://www.swimcloud.com/swimmer/217070/">
+        <img src = "icons/swimmerusa.svg" class="filter-green" width="31" height="31"/></a>
+  
+        <a href="https://www.youtube.com/channel/UC7iFhjzFMpsyjvcPix-0V8w">
+        <i class="fa fa-youtube-play" style="font-size:27px;color:rgb(221, 91, 91)"></i></a>
+    
+        <br><br>
+        
+    </div>
+  </div>
+  <div class="list">
+    
+  <ul class="fa-lu">
+    <li><i class="fa fa-thumb-tack"style="font-size:21px;color:rgb(153, 0, 0);rotate: 40deg;"></i> &ensp;Silver medalist in the 2012 Spanish National Championship in 200m backstroke</li>
+    <li><i class="fa fa-thumb-tack"style="font-size:21px;color:rgb(153, 0, 0);rotate: 40deg;"></i> &ensp;5x First-Time All-American award</li>
+    <li><i class="fa fa-thumb-tack"style="font-size:21px;color:rgb(153, 0, 0);rotate: 40deg;"></i> &ensp;2x GLIAC Champion in 200m backstroke</li>
+    <li><i class="fa fa-thumb-tack"style="font-size:21px;color:rgb(153, 0, 0);rotate: 40deg;"></i> &ensp;4x Valencian Community Champion in 200m backstroke</li>
+    <li><i class="fa fa-thumb-tack"style="font-size:21px;color:rgb(153, 0, 0);rotate: 40deg;"></i> &ensp;Named to the Athletic Director's Honor Roll, 2013</li>
+  </ul>
+  
+  </div>
 
+
+
+
+
+<button type="button" class="collapsible"><b>Know more</b></button>
+<div class="content">
 
 <div class="container"> 
   <div class="row">
@@ -52,17 +96,35 @@
         I am a member of the Astronomical Valencian Association <a href="https://astroava.org/">AVA</a> and enjoy swimming and sailing.
       
       <h3>
-          <!--&bull; Supported by the Swiss National Science Foundation 2017-2021<br>
-          &bull; Silver medalist in the 2012 Spanish Swimming Nationals <a href=https://cdn.leverade.com/files/jT4DXCOVbs.pdf><i class="fa fa-file-pdf-o" style="font-size:17px;color:#648EBB"></i></a>   <a href=https://www.youtube.com/watch?v=EJDxauIgHQY><i class="fa fa-youtube-play" style="font-size:17px;color:#648EBB"></i></a><br>
-          &bull; 5 x First Team All-American honor <a href=https://wsuathletics.com/sports/mens-swimming-and-diving/roster/lucas-fernandez-vilanova/6330><i class="fa fa-external-link" style="font-size:17px;color:#648EBB"></i></a><br>
-          &bull; Named to the Athletic's director honor roll, 2013 <a href=https://wsuathletics.com/sports/mens-swimming-and-diving/roster/lucas-fernandez-vilanova/6330><i class="fa fa-external-link" style="font-size:20px;color:#648EBB"></i></a></i>-->
-     </div>
+    </div>
   </div>
   <img src="images/glider_photo-2_.jpg" width="100%" alt="boat">
   <b>Photo taken in the Olten glider club, after a short test flight.</b>
   <img src="images/boat2.jpg" width="100%" alt="boat">
   <b>Photo taken by baixaulifoto.com, Valencia, Spain.</b>
 </div>
+
+
+</div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+
 
 
 
