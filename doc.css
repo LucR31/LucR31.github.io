@@ -265,8 +265,8 @@ div.gallery img {
   
 div.desc {
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: rgb(180, 180, 180);
+    color: rgb(0, 0, 0);
     font-style: italic;
   }
   
