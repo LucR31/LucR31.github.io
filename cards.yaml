@@ -1,0 +1,26 @@
+
+#CAD-DESIGNS=================
+'CAD-designs':
+  'images/cad-designs/cluster_1.png': 'Raspberry pi 4 cluster case'
+  'images/cad-designs/pot_adapter.png': 'Pot adaptor for hidroponics'
+  'images/cad-designs/ssd_csae_1.png': 'SSD memory card case'
+  'images/cad-designs/cantimplora_0.png': 'Water bottle, cup and pot. A camping solution'
+
+#IMPRESSIONS=================
+'Algorithm impressions':
+  'images/impressions/langton_ant.jpg': "Representation of <a href=https://en.wikipedia.org/wiki/Langton%27s_ant> Langtons ant</a> in 3 dimensions"
+  'images/impressions/seq_final.jpg': Representation of <a href=https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence>
+      Recamán's sequence</a>
+  'images/impressions/fractal.jpg': Fractal cube
+  'images/impressions/collatz.jpg':  A representation of 
+      <a href=https://en.wikipedia.org/wiki/Collatz_conjecture>
+      Collatz conjecture</a>
+  'images/impressions/collatz_2.jpg': Yet, another representation of 
+      <a href=https://en.wikipedia.org/wiki/Collatz_conjecture>
+      Collatz conjecture</a>
+  images/impressions/perlin_3.jpg: Generation of 
+      <a href=https://en.wikipedia.org/wiki/Perlin_noise>
+      Perlin noise</a>
+  images/impressions/kol-2.jpg: <a href=https://en.wikipedia.org/wiki/Kolakoski_sequence>
+      Kolakoski sequence</a>
+  

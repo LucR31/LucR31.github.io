@@ -1,3 +1,15 @@
+:root{
+  --title-mark: rgb(153,167,153,0.9);
+  --font-color: rgb(0,0,0);
+  --title-color:white;
+  --menu-box: rgb(153,167,153);
+  --page-background: rgb(254,245,237);
+}
+
+.mark_text{
+  background-color: var(--title-mark);
+}
+
 .filter-green{
   filter: invert(100%) sepia(1%) saturate(4993%) hue-rotate(301deg) brightness(81%) contrast(104%);
   top: .05em;
@@ -9,6 +21,7 @@
 
 body {
   font-family: "Garamond";
+  color: var(--font-color);
 }
 
 .container {
@@ -50,7 +63,7 @@ body {
 body {
   font-family: Arial;
   padding: 20px;
-  background: #f1f1f1;
+  background: var(--page-background);
 }
 
 /* Header/Blog Title */
@@ -116,7 +129,7 @@ body {
 
 .parallax {
   /* The image used */
-  background-image: url("images/cube_.jpg");
+  
   border-radius: 12px;
 
   /* Set a specific height */
@@ -138,13 +151,13 @@ html {
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(211, 204, 204);
+  background-color: var(--menu-box);
   border-radius: 12px;
 }
 
 .topnav a {
   float: left;
-  color: black;
+  color: var(--font-color);
   font-weight: bold;
   text-align: center;
   padding: 14px 16px;
@@ -162,8 +175,12 @@ html {
   color: black;
 }
 /*===============A=====================*/
+.titles{
+  background-color: var(--title-mark);
+  border-radius: 12px;
+}
 .list{
-  background-color: rgb(211, 204, 204);
+  background-color: var(--menu-box);
   border-radius: 12px;
   font-size:19px;
 }
@@ -192,12 +209,12 @@ footer {
 .title{
   padding: 50px;
   margin: 10px;
-  color: rgb(211, 204, 204);
+  color: var(--title-color);
   font-size: 45px;
 }
 
 .title-sub{
-  color: rgb(211, 204, 204);
+  color: var(--title-color);
   font-size: 18px;
 }
 
@@ -265,9 +282,10 @@ div.gallery img {
   
 div.desc {
     padding: 10px;
-    background-color: rgb(180, 180, 180);
-    color: rgb(0, 0, 0);
+    background-color: var(--title-mark);
+    color: var(--font-color);
     font-style: italic;
+    font-size: 12px;
   }
   
 * {
