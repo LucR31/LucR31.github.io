@@ -5,11 +5,12 @@
   'images/cad-designs/pot_adapter.png': 'Pot adaptor for hidroponics'
   'images/cad-designs/ssd_csae_1.png': 'SSD memory card case'
   'images/cad-designs/cantimplora_0.png': 'Water bottle, cup and pot. A camping solution'
+  'images/cad-designs/wing_1.jpg': 'Origami wing'
 
 #IMPRESSIONS=================
 'Algorithm impressions':
   'images/impressions/langton_ant.jpg': "Representation of <a href=https://en.wikipedia.org/wiki/Langton%27s_ant> Langtons ant</a> in 3 dimensions"
-  'images/impressions/seq_final.jpg': Representation of <a href=https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence>
+  'images/impressions/cover_1.jpg': Representation of <a href=https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence>
       Recamán's sequence</a>
   'images/impressions/fractal.jpg': Fractal cube
   'images/impressions/collatz.jpg':  A representation of 

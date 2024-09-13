@@ -41,7 +41,7 @@ html += """
             </div>
        """
 html+="""
-        <div class="parallax" style="background-image: url('images/impressions/collatz_2.jpg');" > 
+        <div class="parallax" style="background-image: url('images/impressions/cover_01.jpg');" > 
             <div class="title" style="font-family:'Courier New', Courier, monospace">
             <span class="mark_text">
                             <i><b>Projects<br>
