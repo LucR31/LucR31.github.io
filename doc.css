@@ -1,7 +1,8 @@
 :root{
   --title-mark: rgb(153,167,153,0.9);
   --font-color: rgb(0,0,0);
-  --title-color:white;
+  --title-color:rgb(255, 255, 255);
+  --title-sub-color:rgb(255, 255, 255);
   --menu-box: rgb(153,167,153);
   --page-background: rgb(254,245,237);
 }
@@ -11,7 +12,8 @@
 }
 
 .filter-green{
-  filter: invert(100%) sepia(1%) saturate(4993%) hue-rotate(301deg) brightness(81%) contrast(104%);
+  /*filter: invert(100%) sepia(1%) saturate(4993%) hue-rotate(301deg) brightness(81%) contrast(104%);*/
+  color: white;
   top: .05em;
   position: relative;
 }
@@ -97,9 +99,10 @@ body {
 
 /* Add a card effect for articles */
 .card {
-  background-color: white;
+  background-color: var(--menu-box);
   padding: 20px;
   margin-top: 20px;
+  border-radius: 12px;
 }
 
 /* Clear floats after the columns */
@@ -214,7 +217,7 @@ footer {
 }
 
 .title-sub{
-  color: var(--title-color);
+  color: var(--title-sub-color);
   font-size: 18px;
 }
 
@@ -316,3 +319,5 @@ div.desc {
     display: table;
     clear: both;
   }
+
+
