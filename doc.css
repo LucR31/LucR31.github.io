@@ -1,10 +1,11 @@
 :root{
-  --title-mark: rgb(153,167,153,0.9);
+  --title-mark: rgb(255, 242, 175);
   --font-color: rgb(0,0,0);
-  --title-color:rgb(255, 255, 255);
-  --title-sub-color:rgb(255, 255, 255);
-  --menu-box: rgb(153,167,153);
-  --page-background: rgb(254,245,237);
+  --title-color:rgb(0,0,0);
+  --title-sub-color:rgb(0,0,0);
+  --menu-box: rgb(245, 245, 220);
+  --page-background: rgb(255,255,255);
+ 
 }
 
 .mark_text{
@@ -22,7 +23,7 @@
 }
 
 body {
-  font-family: "Garamond";
+  font-family: 'brandon grotesque';
   color: var(--font-color);
 }
 
@@ -58,9 +59,6 @@ body {
 }
 
 /*===============BLOG=====================*/
-* {
-  box-sizing: border-box;
-}
 
 body {
   font-family: Arial;
@@ -102,7 +100,7 @@ body {
   background-color: var(--menu-box);
   padding: 20px;
   margin-top: 20px;
-  border-radius: 12px;
+  /*border-radius: 12px;*/
 }
 
 /* Clear floats after the columns */
@@ -133,7 +131,7 @@ body {
 .parallax {
   /* The image used */
   
-  border-radius: 12px;
+  /*border-radius: 12px;*/
 
   /* Set a specific height */
   min-height: 600px; 
@@ -155,7 +153,7 @@ html {
 .topnav {
   overflow: hidden;
   background-color: var(--menu-box);
-  border-radius: 12px;
+ /* border-radius: 12px;*/
 }
 
 .topnav a {
@@ -210,9 +208,13 @@ footer {
 
 /*===============TITLE=====================*/
 .title{
+  background: rgba(245, 245, 220, 0.5); 
+  max-width: 500px;
+  max-height: 300px;
   padding: 50px;
   margin: 10px;
   color: var(--title-color);
+  letter-spacing: 2px;
   font-size: 45px;
 }
 
@@ -320,4 +322,8 @@ div.desc {
     clear: both;
   }
 
+
+  mark {
+    background: rgb(255, 176, 0)!important;
+  }
 
