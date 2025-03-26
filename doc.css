@@ -135,7 +135,7 @@ body {
 
   /* Set a specific height */
   min-height: 600px; 
-
+  
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -182,7 +182,6 @@ html {
 }
 .list{
   background-color: var(--menu-box);
-  border-radius: 12px;
   font-size:19px;
 }
 ul {
