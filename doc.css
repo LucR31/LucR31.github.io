@@ -207,13 +207,12 @@ footer {
 
 /*===============TITLE=====================*/
 .title{
-  background: rgba(245, 245, 220, 0.5); 
+  background: #f5f5dc80; 
   max-width: 500px;
-  max-height: 300px;
   padding: 50px;
-  margin: 10px;
+  margin: 40px;
   color: var(--title-color);
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
   font-size: 45px;
 }
 
