@@ -1,0 +1,37 @@
+{
+  "hash": "c38af998",
+  "configHash": "d966cf6c",
+  "lockfileHash": "7b84a645",
+  "browserHash": "a6edf32b",
+  "optimized": {
+    "three": {
+      "src": "../../../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "96c6e654",
+      "needsInterop": false
+    },
+    "three/addons/environments/RoomEnvironment.js": {
+      "src": "../../../../node_modules/three/examples/jsm/environments/RoomEnvironment.js",
+      "file": "three_addons_environments_RoomEnvironment__js.js",
+      "fileHash": "2e228412",
+      "needsInterop": false
+    },
+    "three/addons/loaders/GLTFLoader.js": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "file": "three_addons_loaders_GLTFLoader__js.js",
+      "fileHash": "df6fbcfe",
+      "needsInterop": false
+    },
+    "three/addons/objects/Sky.js": {
+      "src": "../../../../node_modules/three/examples/jsm/objects/Sky.js",
+      "file": "three_addons_objects_Sky__js.js",
+      "fileHash": "2f655a0d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-O6BSMOGX": {
+      "file": "chunk-O6BSMOGX.js"
+    }
+  }
+}

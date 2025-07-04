@@ -325,3 +325,15 @@ div.desc {
     background: rgb(255, 176, 0)!important;
   }
 
+/* unvisited link */
+a:link {
+  color:black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+
+
