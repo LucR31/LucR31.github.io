@@ -22,7 +22,7 @@ const pmremGenerator = new THREE.PMREMGenerator( renderer );
 camera.position.z = 23;
 
 
-const light = new THREE.DirectionalLight( 0xffffcc, 10 );
+const light = new THREE.DirectionalLight( 0xffffcc, 1 );
 
 				light.position.set( 200, 1000, 50 );
 
