@@ -3,7 +3,7 @@
   --font-color: rgb(0,0,0);
   --title-color:rgb(0,0,0);
   --title-sub-color:rgb(0,0,0);
-  --menu-box: rgb(245, 245, 220);
+  --menu-box: rgb(255, 255, 255);
   --page-background: rgb(255,255,255);
  
 }
@@ -23,7 +23,6 @@
 }
 
 body {
-  font-family: 'brandon grotesque';
   color: var(--font-color);
 }
 
@@ -61,8 +60,8 @@ body {
 /*===============BLOG=====================*/
 
 body {
-  font-family: Arial;
-  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 17px;
   background: var(--page-background);
 }
 
@@ -79,6 +78,15 @@ body {
 .leftcolumn {
   float: left;
   width: 75%;
+}
+.icon img {
+  object-fit: cover;
+  width: 250px;;
+}
+
+.info  {
+  display: block;
+  overflow:hidden;
 }
 
 /* Right column */
@@ -97,10 +105,18 @@ body {
 
 /* Add a card effect for articles */
 .card {
+  display: grid;
+  column-gap: 25px;
+  align-items: left;
+  grid-template-columns: 1fr 3fr;
   background-color: var(--menu-box);
   padding: 20px;
   margin-top: 20px;
-  /*border-radius: 12px;*/
+  border-radius: 12px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 1px 2px 2px black;
 }
 
 /* Clear floats after the columns */
@@ -161,14 +177,20 @@ html {
   color: var(--font-color);
   font-weight: bold;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 15px;
   text-decoration: none;
   font-size: 18px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  color: rgb(0, 0, 0);
+  border-radius: 12px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 10px;
+  box-shadow: 1px 2px 2px black;
+  
 }
 
 .topnav a.active {
@@ -207,13 +229,19 @@ footer {
 
 /*===============TITLE=====================*/
 .title{
-  background: #f5f5dc80; 
+  background: #ffffff9d; 
   max-width: 500px;
   padding: 50px;
   margin: 50px;
   color: var(--title-color);
   letter-spacing: 1.7px;
   font-size: 45px;
+  
+  border-radius: 12px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 1px 2px 2px black;
 }
 
 .title-sub{

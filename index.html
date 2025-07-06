@@ -2,6 +2,8 @@
 <html lang="en">
 
           <head>
+            <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+            <script src="//cdn.jsdelivr.net/npm/3d-force-graph"></script>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,19 +32,104 @@
 
     <div class="leftcolumn">
         <h2> :: GALLERY ::</h2>
-        <div class="card" id="card">
-            <p>A representation of 
-                <a href=https://en.wikipedia.org/wiki/Collatz_conjecture>
-                Collatz conjecture</a>. Rendered using Python & Blender, animated with Three.js</p>
+        <div class="card">
+          <div class="icon" id="card"></div>
+          <div class="info">
+            The Hydroponics Pot Adaptor uses a regular pot and turn it into a hydroponic system. Plus, 
+            it lets you stack pots to build your own grow tower and attach up to 5 net pots in each adaptor.
+Perfect for small areas and big harvests! Work in progress.<br><br>
+<b>[</b> Designed with <b>Fusion360</b>, animation with <b>Three.js</b> <b>]</b>
+          </div>
+        </div>
+<!--<div class="card">
+            <div id="3d-graph"></div>
+            <div class="info">Langtons Ant in 3D is an extension of the original 2D</div>
+        </div>-->
+
+        <div class="card" >
+          <div class="icon">
+            <img src = "images/impressions/langton_ant.jpg">
+            <img src = "images/impressions/cover_01.jpg">
+          </div>
+          <div class="info">
+            <a href=https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence>Langtons Ant</a> in 3D is an extension of the original 2D cellular automaton, where an ant moves on a grid of cells that can flip states based on simple rules. In three dimensions, 
+            the ant moves through a 3D lattice. At each step, the ant turns, flips the current cell's state, and moves forward along one of the six 
+            possible directions. Despite the simplicity of its rule, the system evolves into intricate, emergent patterns over time.
+            This 3D generalization opens the door to a variety of fascinating behaviors and has been explored in visualizations similar to the ones featured in Numberphile, 
+            demonstrating how simple rules can produce complex, space-filling trajectories in three-dimensional environments.
+          <br><br><b>[</b> Rendered with <b>Blender</b>, programmed with <b>Python</b> <b>]</b>
+          </div>
+        </div>
+
+        <div class="card" >
+          <div class="icon">
+            <img src = "images/algo.png">
+            <img src = "images/impressions/cover_1.jpg">
             
+          </div>
+          <div class="info">
+            Representation of <a href=https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence>Recamans sequence</a>
+            is an integer sequence defined by a simple recursive rule: start at 0, and for each subsequent term, 
+            subtract the step number n if the result is positive and not already in the sequence; otherwise, add n. Formally,
+            \[
+a_n = 
+\begin{cases}
+0 & \text{if } n=0\\
+a_{n-1} - n & \text{if } a_{n-1} - n > 0 \text{ and not already in the sequence} \\
+a_{n-1} + n & \text{otherwise}
+\end{cases}
+\]
+This generates a looping path through the integers, 
+resulting in surprising patterns and occasional repetitions. The sequence gained wider popularity through a Numberphile video, 
+where they used an arc-based visual to illustrate how a simple rule can lead to complex mathematical behavior.
+<br><br><b>[</b> Rendered with <b>Blender</b>, programmed with <b>Python</b> <b>]</b>        
+</div>
+</div>
+        <div class="card" >
+          <div class="icon">
+            <img src = "images/impressions/kol-2.jpg">
             
+          </div>
+          <div class="info">
+            The Kolakoswky sequence is a fascinating mathematical sequence defined by a simple rule: it describes itself in terms of runs of numbers. Starting with 1, the sequence is formed by reading off the lengths of consecutive runs of 1s and 2s in the sequence itself. For example, it begins as 1, 2, 2, 1, 1, 2, 1, 2, 2, 1... This self-describing pattern makes the Kolakoswky sequence an interesting subject in the study of combinatorics and sequence theory, showcasing how complex structures can emerge from simple, recursive rules.  
+          <br><br><b>[</b> Rendered with <b>Blender</b>, programmed with <b>Python</b> <b>]</b>
+          </div>
+        </div>
+
+        <div class="card" >
+          <div class="icon">
+            <img src = "images/others/stool_0.png">
+            <img src = "images/others/stool.png" width="300px">
+          </div>
+          <div class="info">
+            I'm designing a modular stool meant to be 3D printed in separate pieces and easily assembled without tools. The goal is to create a customizable, sturdy stool that fits on standard 3D printers.
+The design uses interlocking parts for strength and flexibility, and I'm currently refining the joints, print settings, and overall structure. The project is still in progress, with ongoing tests to ensure printability and durability.<br><br>
+        <b>[</b> Designed with <b>Fusion360</b>, rendered in <b>Blender</b> <b>]</b>
+        </div>
         </div>
         
-    </div>
+
+        <div class="card" >
+          <div class="icon">
+            <img src = "images/others/ssd_csae_1.png">
+            <img src = "images/others/ssdfinal v36.png">
+            
+          </div>
+          <div class="info">
+              Bookish Case for an SSD memory card. Designed for a <b>CadCrowd</b> challenge.<br><br>
+              <b>[</b> Designed with <b>Fusion360</b>, rendered in <b>Blender</b> <b>]</b>
+          </div>
+        </div>
+        
+    
     </div>
     <div class="rightcolumn">
-        <h2>::</h2>
-        <div class="card"></div>
+        <h2>:: Ongoing projects ::</h2>
+        <div class="card">
+          <ol>
+            <li>Hidroponics pot adaptor</li>
+          </ol>
+        </div>
     </div>
 
     <script type="module" src="main.js"></script>
