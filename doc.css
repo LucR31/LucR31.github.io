@@ -77,17 +77,20 @@ body {
 /* Left column */
 .leftcolumn {
   float: left;
-  width: 75%;
+  width: 90%;
 }
-.icon img {
-  object-fit: cover;
-  width: 100%;
+.info img  {
+  flex: 1;
+  min-width: 50px;
+  max-width: 500px;
+  overflow: hidden;
 }
 
+
 .info  {
-  display: block;
-  overflow:hidden;
-  width: 100%;
+  flex: 1;
+  min-width: 50px;
+  overflow: hidden;
 }
 
 /* Right column */
@@ -99,13 +102,16 @@ body {
 
 /* Add a card effect for articles */
 .card {
-  display: flex;
-  column-gap: 1px;
-  align-items: left;
-  
+  display:flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items:flex-start;
+
+  max-width: 800px;
+
   background-color: var(--menu-box);
-  padding: 10px;
-  margin-top: 10px;
+  padding: 20px;
+  margin-top: 20px;
 
   border-radius: 12px;
   border-style: solid;
@@ -113,10 +119,11 @@ body {
   border-width: 1px;
   box-shadow: 1px 2px 2px black;
 }
-.card > * {
-    width:50%;
-    padding:1rem;
-}
+@media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+      }
+    }
 
 /* Clear floats after the columns */
 .row:after {
