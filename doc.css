@@ -371,5 +371,51 @@ a:visited {
   color: black;
 }
 
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.project-list {
+  width: 100%;
+  padding: 0;
+}
+
+.project-list li {
+  width: 50%;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  margin: 30px auto;
+  padding: 20px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.project-list .text {
+  flex: 1;
+}
+
+.project-list img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-list li {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .project-list img {
+    width: 100%;
+  }
+}
+
 
 
