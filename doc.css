@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 85%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -211,12 +211,12 @@ html {
 }
 .list{
   background-color: var(--menu-box);
-  font-size:19px;
+  font-size:16px;
 }
 ul {
   list-style-type: none;
-  padding:20px;
-  margin:40px;
+  padding:10px;
+  margin:10px;
   line-height: 1.5;
 }
 
@@ -284,25 +284,35 @@ footer {
 /*collapsible*/
 
 .collapsible {
-  background-color: rgb(211, 204, 204);
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 18px;
-  width: 100%;
-  border: none;
-  border-radius: 12px;
+  width: 70%;
+
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-left: 15%;
+
+  border-radius: 12px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 10px;
+  box-shadow: 1px 2px 2px black;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #dedddd;
 }
 
 .content {
   display: none;
   overflow: hidden;
+  
 }
 
 /*image gallery*/
@@ -415,6 +425,36 @@ a:visited {
   .project-list img {
     width: 100%;
   }
+}
+
+.highlight {
+  background-color: rgb(153, 63, 35);
+  color: rgb(255, 255, 255);
+  padding: 2px 4px;
+}
+
+.highlight_2 {
+  background-color: rgb(255, 51, 51);
+  color: rgb(255, 255, 255);
+  padding: 2px 4px;
+}
+
+.highlight_international {
+  background-color: rgb(11, 80, 255);
+  color: rgb(255, 255, 255);
+  padding: 2px 4px;
+}
+
+.highlight_wc {
+  background-color: rgb(255, 190, 11);
+  color: rgb(0, 0, 0);
+  padding: 2px 4px;
+}
+
+.highlight_master {
+  background-color: rgb(23, 100, 11);
+  color: rgb(255, 255, 255);
+  padding: 2px 15px;
 }
 
 
