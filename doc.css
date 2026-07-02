@@ -236,7 +236,7 @@ footer {
 /*===============TITLE=====================*/
 .title{
   background: #ffffffc3; 
-  max-width: 500px;
+  max-width: 700px;
   padding: 50px;
   margin: 50px;
   color: var(--title-color);
