@@ -123,11 +123,24 @@ h1,h2,h3{
 
 .times strong{font:22px monospace}
 
-.history{list-style:none;margin:0;padding:0}
+.history{
+  list-style:none;
+  margin:0;
+  padding:0
+}
 
-.history li{display:grid;grid-template-columns:145px 145px 1fr;gap:15px;padding:14px 22px;border-bottom:1px solid var(--line);align-items:center}
+.history li{
+  display:grid;
+  grid-template-columns: 145px 145px 1fr;
+  gap:15px;
+  padding:14px 22px;
+  border-bottom:1px solid var(--line);
+  align-items:center
+}
 
-.history li:last-child{border-bottom:0}
+.history li:last-child{
+  border-bottom:0
+}
 
 details{background:var(--panel);border:1px solid var(--line);border-radius:6px;margin:10px 0;overflow:hidden}
 
