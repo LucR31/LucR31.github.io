@@ -1,33 +1,18 @@
-:root{
-    --bg:#f3f1eb;
-    --panel:#e5e4df;
-    --panel2:#d8d9d5;
-    --line:#b7bab7;
 
-    --text:#252a2b;
-    --muted:#707678;
+:root {
+    --bg: #F7F8FA;
+    --panel: #EAEDF0;
+    --panel2: #D9DEE4;
+    --line: #BCC5CF;
 
-    --green:#557b72;
-    --gold:#b58a55;
-    --blue:#557d91;
-    --red:#a75d59;
+    --text: #202832;
+    --muted: #697586;
+
+    --color_1: #398477;
+    --color_2: #C18B52;
+    --blue: #547DA6;
+    --red: #C26060;
 }
-
-/*
-:root{
-    --bg:#161420;
-    --panel:#1e1b29;
-    --panel2:#262331;
-    --line:#3a3545;
-
-    --text:#d9d5e0;
-    --muted:#8a8498;
-
-    --green:#4d8a63;
-    --gold:#c5883a;
-    --blue:#71618f;
-    --red:#ab4a5c;
-}*/
 
 *{box-sizing:border-box}
 
@@ -51,7 +36,7 @@ body{
 
 .topnav{display:flex;justify-content:center;gap:28px;padding:22px 16px;border-bottom:1px solid var(--line);font-family:monospace}
 .topnav a{color:var(--text);text-decoration:none}
-.topnav a:hover{color:var(--green)}
+.topnav a:hover{color:var(--color_1)}
 .container{max-width:1050px;margin:0 auto;padding:45px 22px 80px}
 
 h1,h2,h3{
@@ -89,10 +74,10 @@ h1,h2,h3{
   color:var(--text);
   margin-right:4px
 }
-.section-title{font-size:13px;color:var(--green);letter-spacing:.15em;text-transform:uppercase;margin:38px 0 15px}
+.section-title{font-size:13px;color:var(--color_1);letter-spacing:.15em;text-transform:uppercase;margin:38px 0 15px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px;transition:.2s;border-left:3px solid var(--green)}
-.card:hover{transform:translateY(-2px);border-color:var(--green)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px;transition:.2s;border-left:3px solid var(--color_1)}
+.card:hover{transform:translateY(-2px);border-color:var(--color_1)}
 .card .event{font-family:monospace;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
 .card .time{
   font-size:30px;
@@ -107,10 +92,10 @@ h1,h2,h3{
   margin:1px 0
 }
 .card .course{font-size:11px;color:var(--muted)}
-.card .level{display:inline-block;margin-top:12px;padding:3px 7px;background:var(--gold);color:#1a1a1a;font-size:10px;font-weight:700;border-radius:3px}
+.card .level{display:inline-block;margin-top:12px;padding:3px 7px;background:var(--color_2);color:#1a1a1a;font-size:10px;font-weight:700;border-radius:3px}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 .filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 12px;border-radius:4px;cursor:pointer}
-.filter.active,.filter:hover{border-color:var(--green);color:var(--text)}
+.filter.active,.filter:hover{border-color:var(--color_1);color:var(--text)}
 .detail{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden}
 .detail-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
 .detail-head h2{margin:0;font-size:20px}
@@ -131,7 +116,7 @@ h1,h2,h3{
 
 .history li{
   display:grid;
-  grid-template-columns: 145px 145px 1fr;
+  grid-template-columns: 200px 145px 1fr;
   gap:15px;
   padding:14px 22px;
   border-bottom:1px solid var(--line);
@@ -164,47 +149,67 @@ ul.raw{margin:0;padding-left:20px}
 .badge-group {
   display: flex;
   gap: 5px;
-  align-items: stretch;
+  
 }
 
 .badge {
-  flex: 1;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 24px;
-  padding: 3px 7px;
-  border-radius: 3px;
+  min-height: 22px;
+  padding: 4px 8px;
+  border-radius: 999px;
   font-size: 10px;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
+  box-sizing: border-box;
 }
 
+/* National */
 .badge-group .national {
-  background: var(--green);
-  color: var(--bg);
+  background: color-mix(in srgb, var(--color_1), transparent 88%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
 }
 
+/* Regional */
 .badge-group .regional {
-  background: var(--gold);
-  color: var(--bg);
+  background: color-mix(in srgb, var(--color_1), transparent 88%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
 }
 
+/* Master */
 .badge-group .master {
-  background: var(--blue);
-  color: var(--bg);
+  background: color-mix(in srgb, var(--color_1), transparent 88%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
 }
 
+/* EU */
 .badge-group .eu {
-  background: var(--text);
-  color: var(--bg);
+  background: color-mix(in srgb, var(--color_1), transparent 92%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 75%);
 }
 
+/* World Championship */
 .badge-group .wc {
-  background: var(--red);
-  color: var(--bg);
+  background: color-mix(in srgb, var(--color_1), transparent 88%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
 }
+
+/* PB */
+.badge-group .pb {
+  background: color-mix(in srgb, var(--color_1), transparent 88%);
+  color: var(--color_1);
+  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
+}
+
 
 @media(max-width:650px)
 {
