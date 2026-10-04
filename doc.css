@@ -14,7 +14,9 @@
     --red: #C26060;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
 
 /* unvisited link */
 a:link {
