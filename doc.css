@@ -207,9 +207,9 @@ ul.raw{margin:0;padding-left:20px}
 
 /* PB */
 .badge-group .pb {
-  background: color-mix(in srgb, var(--color_1), transparent 88%);
-  color: var(--color_1);
-  border: 1px solid color-mix(in srgb, var(--color_1), transparent 70%);
+  background: color-mix(in srgb, var(--red), transparent 88%);
+  color: var(--red);
+  border: 1px solid color-mix(in srgb, var(--red), transparent 70%);
 }
 
 

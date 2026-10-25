@@ -5,9 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="doc.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flag-icons@7.3.2/css/flag-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.3.2/css/flag-icons.min.css">
 <title>Swimming</title>
+
+<style>
+  .sw { --line: rgba(128,128,128,.35); }
+  .sw .muted { opacity: .65 } .sw .small { font-size: .85em }
+  .sw table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; font-variant-numeric: tabular-nums }
+  .sw caption { text-align: left; font-weight: 600; padding-bottom: 6px }
+  .sw th, .sw td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+  .sw thead th { border-bottom-width: 2px }
+  .sw tr.upcoming { opacity: .65; font-style: italic }
+  .sw .pb { border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; font-size: .75em }
+  .sw .event { scroll-margin-top: 4.5rem }
+  .sw svg { width: 100%; max-width: 560px; height: auto } .sw svg .t { font-size: 11px; fill: currentColor }
+  .sw svg circle { fill: currentColor } .sw svg .muted { opacity: .65 }
+  .sw figure { margin: 0 0 16px }
+  .sw .picker { display: flex; gap: 8px; margin: 8px 0 }
+  .sw .picker button { font: inherit; color: inherit; background: transparent; border: 1px solid currentColor; border-radius: 999px; padding: 4px 16px; cursor: pointer }
+  .sw .picker button[aria-pressed="true"] { border-width: 2px; font-weight: 700 }
+  .sw .fi { margin-right: 4px }
+  .sw button:focus-visible, .sw a:focus-visible { outline: 3px solid currentColor; outline-offset: 3px }
+  @media (max-width: 600px) {
+    .sw table.results thead { position: absolute; left: -9999px }
+    .sw table.results tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--line) }
+    .sw table.results td { display: flex; gap: 8px; border: 0; padding: 2px 10px }
+    .sw table.results td::before { content: attr(data-label); min-width: 4.5em; opacity: .65 }
+  }
+</style>
 
 </head>
 <body>
@@ -18,13 +43,18 @@
     <a href="swimming.html">Swimming</a>
   </div>
 
-<main class="container">
-  <h1 class="page-title">SWIMMING</h1>
-  <div class="legend" aria-label="Swimming course legend">
-    <span><b>LCM</b> Long Course Meters · 50m pool</span>
-    <span><b>SCM</b> Short Course Meters · 25m pool</span>
-    <span><b>SCY</b> Short Course Yards · 25-yard pool</span>
-    <span><b>External links:</b> 
+
+
+<main class="container sw">
+
+<h1>Swimming</h1>
+
+<p class="muted small">
+  <b>LCM:</b> long course meters. <br>
+  <b>SCM:</b> short course meters. <br>
+  <b>SCY:</b> short course yards. <br>
+  <b>PB:</b> best in that course.<br>
+  <span><b>External links:</b> 
       <a href="https://www.swimcloud.com/swimmer/217070/">
         Swimcloud
       </a>
@@ -32,333 +62,232 @@
       <a href="https://www.swimrankings.net/index.php?page=athleteDetail&athleteId=4082438">
         Swimranking
       </a> 
-    </span>
-  </div>
+  </span>
+</p>
 
-<div class="section-title">Personal Bests</div>
-<div class="grid">
-  <a class="card" href="#back200" style="text-decoration:none;color:inherit">
-    <div class="event">200m Backstroke</div>
-    <div class="time">2:03.83</div>
+<br>
 
-    <div class="course">LCM</div>
-  </a>
-<a class="card" href="#back100" style="text-decoration:none;color:inherit">
-  <div class="event">100m Backstroke</div>
-  <div class="time">57.22</div>
-  <div class="course">LCM</div>
-</a>
-<a class="card" href="#back50" style="text-decoration:none;color:inherit">
-  <div class="event">50m Backstroke</div>
-  <div class="time">27.39</div>
-  <div class="course">LCM</div>
-</a>
-<a class="card" href="#free100" style="text-decoration:none;color:inherit">
-  <div class="event">100m Freestyle</div>
-  <div class="time">53.04</div>
-  <div class="course">LCM</div>
-</a>
-<a class="card" href="#free50" style="text-decoration:none;color:inherit">
-  <div class="event">50m Freestyle</div>
-  <div class="time">24.62</div>
-  <div class="course">LCM</div>
-</a>
-<!--<a class="card" href="#mp" style="text-decoration:none;color:inherit">
-    <div class="event">Fencing</div>
-    <div class="time">152</div>
-    <div class="course">14 BOUTS</div>
-  </a>
+<h2>Personal bests by course</h2>
+  <table class="matrix">
+    <thead><tr><th scope="col">Event</th><th scope="col">LCM</th><th scope="col">SCM</th><th scope="col">SCY</th></tr></thead><tbody>
+    <tr><th scope="row"><a href="#back200">200m Backstroke</a></th><td>2:03.83</td><td>1:59.60</td><td>1:45.94</td></tr>
+    <tr><th scope="row"><a href="#back100">100m Backstroke</a></th><td>57.22</td><td>55.16</td><td>49.87</td></tr>
+    <tr><th scope="row"><a href="#back50">50m Backstroke</a></th><td>27.39</td><td>26.49</td><td>23.34</td></tr>
+    <tr><th scope="row"><a href="#free100">100m Freestyle</a></th><td>53.04</td><td>51.04</td><td><span class="muted">&ndash;</span></td></tr>
+    <tr><th scope="row"><a href="#free50">50m Freestyle</a></th><td>24.62</td><td>23.76</td><td>20.91</td></tr>
+    </tbody>
+  </table>
 
-  <a class="card" href="#mp" style="text-decoration:none;color:inherit">
-    <div class="event">Obstacle Race</div>
-    <div class="time">--</div>
-  </a>
+<br>
 
-  <a class="card" href="#mp" style="text-decoration:none;color:inherit">
-    <div class="event">Laser Run</div>
-    <div class="time">10:16</div>
-    <div class="course">3 LAPS </div>
-  </a>-->
-</div>
+<h2>Results by event</h2>
+<section id="back200" class="event">
+  <h3>200m Backstroke</h3>
+  <table class="results">
+    <thead>
+    <tr>
+      <th scope="col">Year</th>
+      <th scope="col">Meet</th>
+      <th scope="col">Course</th>
+      <th scope="col">Place</th>
+      <th scope="col">Time</th>
+      <th scope="col">Level</th>
+    </tr>
+    </thead>
+    <tbody>
 
+<!--<tr class="upcoming"><td data-label="Year">2027</td>
+  <td data-label="Meet"><span class="fi fi-hu" role="img" aria-label="Hungary"></span> World Cup Masters Championships<span class="muted small"> &middot; Budapest</span></td>
+  <td data-label="Course">&ndash;</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">Upcoming</td>
+  <td data-label="Level">Masters</td></tr>
+<tr class="upcoming"><td data-label="Year">2027</td>
+  <td data-label="Meet"><span class="fi fi-ch" role="img" aria-label="Switzerland"></span> Swiss Masters Championships<span class="muted small"> &middot; TBD</span></td>
+  <td data-label="Course">&ndash;</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">Upcoming</td>
+  <td data-label="Level">Masters</td></tr>-->
+<tr><td data-label="Year">2014</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> NCAA Division II Championships<span class="muted small"> &middot; Geneva, Ohio</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">10th</td>
+  <td data-label="Time">1:45.94 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2013</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> NCAA Division II Championships<span class="muted small"> &middot; Birmingham, Alabama</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">10th</td>
+  <td data-label="Time">1:47.14</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2013</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> GLIAC Championships<span class="muted small"> &middot; Canton, Ohio</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">1st</td>
+  <td data-label="Time">1:46.67</td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Terrassa</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">2nd</td>
+  <td data-label="Time">2:03.83 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> NCAA Division II Championships<span class="muted small"> &middot; Mansfield, Texas</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">6th</td>
+  <td data-label="Time">1:47.40</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> GLIAC Championships<span class="muted small"> &middot; Jenison, Michigan</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">1st</td>
+  <td data-label="Time">1:47.91</td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Mataró</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">7th</td>
+  <td data-label="Time">2:06.34</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Madrid</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">8th</td>
+  <td data-label="Time">1:59.93</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Trofeo Ciudad de Zaragoza<span class="muted small"> &middot; Zaragoza</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">2:10.43</td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2010</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Barcelona</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">8th</td>
+  <td data-label="Time">2:07.34</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2010</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish Open Championship<span class="muted small"> &middot; Málaga</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">2:09.95</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2010</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; P. Mallorca</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">8th</td>
+  <td data-label="Time">1:59.60 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+    </tbody>
+  </table>
+</section>
 
-<div class="section-title">Event Detail</div>
-
-<div id="back200" class="detail">
-  <div class="detail-head"><div><h2>200m BACKSTROKE</h2><p>Competition history</p></div>
-    <div class="times">
-      <div><small>LCM</small><strong>2:03.83</strong></div>
-      <div><small>SCM</small><strong>1:59.60</strong></div>
-      <div><small>SCY</small><strong>1:45.94</strong></div>
-    </div>
-  </div>
-
-  <ul class="history">
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-          <span class="badge pb">PB</span>
-        </span>
-        <span class = "badge-group">
-          <b>10th · 1:45.94</b>
-        </span>
-       
-        <span><span class="fi fi-us"></span> NCAA Division II Championships · SCY · 2014 · Geneva, Ohio</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>10th · 1:47.14</b><span><span class="fi fi-us"></span> NCAA Division II Championships · SCY · 2013 · Birmingham, Alabama</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span>
-        <b>1st · 1:46.67</b><span><span class="fi fi-us"></span> GLIAC Championships · SCY · 2013 · Canton, Ohio</span></li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-          <span class="badge pb">PB</span>
-        </span>
-        <b>2nd · 2:03.83</b><span><span class="fi fi-es"></span>  Spanish National Championship · LCM · 2012 · Terrassa</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>6th · 1:47.40</b><span><span class="fi fi-us"></span> NCAA Division II Championships · SCY · 2012 · Mansfield, Texas</span>
-    </li>
-    
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b>1st · 1:47.91</b><span><span class="fi fi-us"></span> GLIAC Championships · SCY · 2012 · Jenison, Michigan</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>7th · 2:06.34</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2011 · Mataró</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>8th · 1:59.93</b><span><span class="fi fi-es"></span> Spanish National Championship · SCM · 2011 · Madrid</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b>NP · 2:10.43</b><span><span class="fi fi-es"></span> Trofeo Ciudad de Zaragoza · LCM · 2011 · Zaragoza</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>8th · 2:07.34</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2010 · Barcelona</span>
-    </li>
-
-     <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b>NP · 2:09.95</b><span><span class="fi fi-es"></span> Spanish Open Championship · LCM · 2010 · Málaga</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-          <span class="badge pb">PB</span>
-        </span>
-        <b>8th · 1:59.60</b><span><span class="fi fi-es"></span> Spanish National Championship · SCM · 2010 · P. Mallorca</span>
-    </li>
-
-  </ul>
-</div>
-
-<div id="back100" class="detail" style="margin-top:16px">
-  <div class="detail-head"><div><h2>100m BACKSTROKE</h2><p>Competition history</p></div>
-    <div class="times">
-      <div>
-        <small>LCM</small>
-        <strong>57.22</strong>
-      </div>
-      <div>
-        <small>SCM</small>
-        <strong>55.16</strong>
-      </div>
-      <div>
-        <small>SCY</small>
-        <strong>49.87</strong>
-      </div>
-    </div>
-  </div>
-  <ul class="history">
-<!--
-    <li><span class = "badge-group">
-          <span class="badge master">MASTER</span>
-          <span class="badge national">NATIONAL</span>
-        </span>
-        <b>TBD · TBD</b><span><span class="fi fi-ch"></span> Swiss Masters Championships · 2026 · Lugano</span>
-    </li>-->
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-          <span class="badge pb">RELAY</span>
-          <span class="badge pb">PB</span>
-        </span>
-        <b>6th · 49.87</b><span><span class="fi fi-us"></span> NCAA Division II Championships · SCY · 2013 · Birmingham, Alabama</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span>
-      <b> 57.22</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2012 · Terrassa</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b> 55.16</b><span><span class="fi fi-es"></span> Spanish National Championship · SCM · 2011 · Madrid</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span>
-      <b> 59.51</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2009 · Las Palmas</span>
-    </li>
-
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span>
-      <b> 59.06</b><span><span class="fi fi-es"></span> Spanish Junior Championship · SCM · 2008 · Gijon</span>
-    </li>
-
-  </ul>
-</div>
-
-<div id="back50" class="detail" style="margin-top:16px">
-  <div class="detail-head">
-    <div>
-      <h2>50m BACKSTROKE</h2>
-      <p>Competition history</p>
-    </div>
-    <div class="times">
-      <div>
-        <small>LCM</small>
-        <strong>27.39</strong>
-      </div>
-      <div>
-        <small>SCM</small>
-        <strong>26.49</strong>
-      </div>
-      <div>
-        <small>SCY</small>
-        <strong>23.34</strong>
-      </div>
-    </div>
-  </div>
-  <ul class="history">
-
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-          <span class="badge pb">RELAY</span>
-          <span class="badge pb">PB</span>
-        </span>
-        <b>2nd · 23.34</b><span><span class="fi fi-us"></span> GLIAC Championships · SCY · 2013 · Canton, Ohio</span></li>
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b> 27.39</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2012 · Terrassa</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b> 26.49</b><span><span class="fi fi-es"></span> Copa de Clubs Division II · SCM · 2009 · Madrid</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span>
-      <b> 28.38</b><span><span class="fi fi-es"></span> Cto. España por Comunidades Autónomas · SCM · 2008 · Valladolid</span>
-    </li>
-
-    
-  </ul>
-</div>
+<section id="back100" class="event">
+<h3>100m Backstroke</h3>
+<table class="results"><thead><tr><th scope="col">Year</th><th scope="col">Meet</th><th scope="col">Course</th><th scope="col">Place</th><th scope="col">Time</th><th scope="col">Level</th></tr></thead><tbody>
+<tr><td data-label="Year">2013</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> NCAA Division II Championships<span class="muted small"> &middot; Birmingham, Alabama</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">6th</td>
+  <td data-label="Time">49.87 <b class="pb" title="Personal best in this course">PB</b> <span class="muted small">(relay)</span></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Terrassa</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">57.22 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Madrid</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">55.16 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2009</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Las Palmas</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">59.51</td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2008</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish Junior Championship<span class="muted small"> &middot; Gijón</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">59.06</td>
+  <td data-label="Level">National</td></tr>
+</tbody>
+</table>
+</section>
 
 
-<div id="free100" class="detail" style="margin-top:16px">
-  <div class="detail-head">
-    <div><h2>100m FREESTYLE</h2><p>Competition history</p></div>
-    <div class="times">
-      <div>
-        <small>LCM</small>
-        <strong>53.04</strong>
-      </div>
-      <div>
-        <small>SCM</small>
-        <strong>51.04</strong>
-       <div class="time_master">1:07.60 (M)</div>
-      </div>
-    </div>
-  </div>
-  <ul class="history">
-    <li><span class = "badge-group">
-          <span class="badge national">NATIONAL</span>
-        </span><b> 53.04</b><span><span class="fi fi-es"></span> Spanish National Championship · LCM · 2012 · Terrassa</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b> 51.04</b><span><span class="fi fi-es"></span> Copa de Clubs Division II · SCM · 2011 · Castellón</span>
-    </li>
-  </ul>
-</div>
+<section id="back50" class="event">
+<h3>50m Backstroke</h3>
+<table class="results"><thead><tr><th scope="col">Year</th><th scope="col">Meet</th><th scope="col">Course</th><th scope="col">Place</th><th scope="col">Time</th><th scope="col">Level</th></tr></thead><tbody>
+<!--<tr class="upcoming"><td data-label="Year">2027</td>
+  <td data-label="Meet"><span class="fi fi-ch" role="img" aria-label="Switzerland"></span> Masters Sprintnacht<span class="muted small"> &middot; Winterthur</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">Upcoming</td>
+  <td data-label="Level">Masters</td></tr>-->
+<tr><td data-label="Year">2013</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> GLIAC Championships<span class="muted small"> &middot; Canton, Ohio</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">2nd</td>
+  <td data-label="Time">23.34 <b class="pb" title="Personal best in this course">PB</b> <span class="muted small">(relay)</span></td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Terrassa</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">27.39 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2009</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Copa de Clubs Division II<span class="muted small"> &middot; Madrid</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">26.49 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2008</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Cto. España por Comunidades Autónomas<span class="muted small"> &middot; Valladolid</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">28.38</td>
+  <td data-label="Level">National</td></tr>
+</tbody>
+</table>
+</section>
 
-<div id="free50" class="detail" style="margin-top:16px">
-  <div class="detail-head"><div>
-    <h2>50m FREESTYLE</h2><p>Competition history</p></div>
-    <div class="times">
-      <div><small>LCM</small><strong>24.62</strong></div>
-      <div><small>SCM</small><strong>23.76</strong></div>
-      <div><small>SCY</small><strong>20.91</strong></div>
-    </div>
-  </div>
-  <ul class="history">
-    <li>
-        <span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span>
-        <b>10th · 20.91</b>
-        <span>
-          <span class="fi fi-us"></span> GLIAC Championships · SCY · 2014 · Geneva, Ohio
-        </span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b>10th · 21.12</b><span><span class="fi fi-us"></span> GLIAC Championships · SCY · 2013 · Canton, Ohio</span></li>
-    <li><span class = "badge-group">
-        <span class="badge regional">REGIONAL</span>
-        </span><b> 23.76</b><span><span class="fi fi-es"></span> Copa de Clubs Division II · SCM · 2011 · Castellón</span>
-    </li>
-    <li><span class = "badge-group">
-          <span class="badge regional">REGIONAL</span>
-        </span><b> 24.62</b><span><span class="fi fi-es"></span> Valencian Community Championship · LCM · 2010 · València</span>
-    </li>
-  </ul>
+<section id="free100" class="event">
+<h3>100m Freestyle</h3>
+<table class="results"><thead><tr><th scope="col">Year</th><th scope="col">Meet</th><th scope="col">Course</th><th scope="col">Place</th><th scope="col">Time</th><th scope="col">Level</th></tr></thead><tbody>
 
-</div>
+  <tr>
+    <td data-label="Year">2025</td>
+    <td data-label="Meet"><span class="fi fi-ch" role="img" aria-label="Switzerland"></span> Swiss Open Modern Pentathlon<span class="muted small"> &middot; Bern</span></td>
+    <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+    <td data-label="Time">1:07.45</td>
+    <td data-label="Level">Masters</td>
+  </tr>
+<tr><td data-label="Year">2012</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Spanish National Championship<span class="muted small"> &middot; Terrassa</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">53.04 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">National</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Copa de Clubs Division II<span class="muted small"> &middot; Castellón</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">51.04 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">Regional</td></tr>
+</tbody>
+</table>
+</section>
 
-<!--
-<div id="mp" class="detail" style="margin-top:16px">
-  <div class="detail-head">
-    <div>
-      <h2>MODERN PENTATHLON</h2>
-      <p>Competition history</p>
-    </div>
-    <div class="times">
-      <div><small>Score</small><strong>972 pts</strong></div>
-    </div>
-  </div>
-
-  <ul class="history">
-
-    <li><span class = "badge-group">
-          <span class="badge master">MASTER</span>
-          <span class="badge national">NATIONAL</span>
-        </span>
-        <b>1st · 972 pts</b><span><span class="fi fi-ch"></span> Swiss Open Championships · 2025 · Bern</span>
-    </li>
-   
-  </ul>
-</div>-->
+<section id="free50" class="event">
+<h3>50m Freestyle</h3>
+<table class="results"><thead><tr><th scope="col">Year</th><th scope="col">Meet</th><th scope="col">Course</th><th scope="col">Place</th><th scope="col">Time</th><th scope="col">Level</th></tr></thead><tbody>
+<tr><td data-label="Year">2014</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> GLIAC Championships<span class="muted small"> &middot; Geneva, Ohio</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">10th</td>
+  <td data-label="Time">20.91 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2013</td>
+  <td data-label="Meet"><span class="fi fi-us" role="img" aria-label="United States"></span> GLIAC Championships<span class="muted small"> &middot; Canton, Ohio</span></td>
+  <td data-label="Course">SCY</td><td data-label="Place">10th</td>
+  <td data-label="Time">21.12</td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2011</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Copa de Clubs Division II<span class="muted small"> &middot; Castellón</span></td>
+  <td data-label="Course">SCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">23.76 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">Regional</td></tr>
+<tr><td data-label="Year">2010</td>
+  <td data-label="Meet"><span class="fi fi-es" role="img" aria-label="Spain"></span> Valencian Community Championship<span class="muted small"> &middot; València</span></td>
+  <td data-label="Course">LCM</td><td data-label="Place">&ndash;</td>
+  <td data-label="Time">24.62 <b class="pb" title="Personal best in this course">PB</b></td>
+  <td data-label="Level">Regional</td></tr>
+</tbody>
+</table>
+</section>
 
 </main>
+
 </body>
 </html>
