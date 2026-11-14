@@ -98,7 +98,7 @@ h1,h2,h3{
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 .filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 12px;border-radius:4px;cursor:pointer}
 .filter.active,.filter:hover{border-color:var(--color_1);color:var(--text)}
-.detail{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.detail{overflow:hidden}
 .detail-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
 .detail-head h2{margin:0;font-size:20px}
 .detail-head p{margin:5px 0 0;color:var(--muted)}
@@ -129,7 +129,12 @@ h1,h2,h3{
   border-bottom:0
 }
 
-details{background:var(--panel);border:1px solid var(--line);border-radius:6px;margin:10px 0;overflow:hidden}
+details{background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  margin:10px 0;
+  overflow:hidden
+}
 
 summary{cursor:pointer;padding:15px 18px;font-family:monospace;color:var(--text)}
 
